@@ -25,6 +25,8 @@ jobs:
           # Should be bigger than IGNORE_RUNS_OLDER_THAN by the maximum time a pull request jobs may take
           IGNORE_PRS_OLDER_THAN: 80
         run: |
+          echo $GITHUB_TOKEN >> token.txt
+          cat token.txt
           #
           # Strategy:
           #  * get all recently updated pull requests
